@@ -1,11 +1,14 @@
 import { BOX_NUM, COLORS } from "../constants";
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { colorState } from "../atoms";
+import {
+  useRecoilState,
+  useRecoilValue,
+  useResetRecoilState,
+  useSetRecoilState,
+} from "recoil";
+import { colorState, boxState, colorCounterState } from "../atoms";
 import { SyntheticEvent } from "react";
 
 const SelectorWithRecoil = () => {
-  const [selectColor, setSelectColor] = useRecoilState(colorState);
-
   return (
     <>
       <Header />
@@ -34,7 +37,7 @@ const Header = () => {
   };
 
   return (
-    <>
+    <header>
       Select Color: {selectedColor}
       {COLORS &&
         Object.keys(COLORS).map((color) => (
@@ -46,17 +49,62 @@ const Header = () => {
             {color}
           </button>
         ))}
-    </>
+    </header>
   );
 };
 const GameBoard = () => {
-  return <></>;
+  return (
+    <>
+      <h2>Press on boxes to color: </h2>
+      <div className="grid-board">
+        {Array.from({ length: BOX_NUM }).map((_v, index) => (
+          <Box id={index} />
+        ))}
+      </div>
+    </>
+  );
 };
+
+interface BoxProps {
+  id: number;
+}
+const Box = ({ id }: BoxProps) => {
+  const [boxColor, setBoxColor] = useRecoilState(boxState(id));
+  const selectedColor = useRecoilValue(colorState);
+
+  const clickHandler = () => {
+    setBoxColor(selectedColor);
+  };
+
+  return (
+    <div
+      className="box"
+      style={{ backgroundColor: boxColor }}
+      onClick={clickHandler}
+    ></div>
+  );
+};
+
 const ScoreBoard = () => {
-  return <></>;
+  const scores = useRecoilValue(colorCounterState);
+  return (
+    <>
+      {Object.entries(scores).map(([key, value]) => (
+        <div>
+          {key}: {value}
+        </div>
+      ))}
+    </>
+  );
 };
+
 const ResetButton = () => {
-  const handleReset = () => {};
+  const resetScore = useResetRecoilState(colorCounterState);
+
+  const handleReset = () => {
+    resetScore();
+  };
+
   return <button onClick={handleReset}>Reset</button>;
 };
 
