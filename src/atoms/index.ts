@@ -1,5 +1,5 @@
 import { BOX_NUM } from "./../constants/index";
-import { atom, atomFamily, selector, selectorFamily } from "recoil";
+import { atom, atomFamily, selector } from "recoil";
 import { COLORS } from "../constants";
 
 export const colorState = atom({

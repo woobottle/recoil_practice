@@ -1,20 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './assets/css/index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { RecoilRoot } from 'recoil';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./assets/css/index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root");
 if (!rootElement) {
-  throw new Error('need rootElement')
+  throw new Error("need rootElement");
 }
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <RecoilRoot>
-      <App />
-    </RecoilRoot>
+    <App />
   </React.StrictMode>
 );
 

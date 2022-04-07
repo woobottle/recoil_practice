@@ -5,3 +5,7 @@ export const COLORS = {
   RED: "RED",
   BLUE: "BLUE",
 };
+
+export const initialBoxes = Array.from({ length: BOX_NUM }).fill(
+  COLORS.WHITE
+) as string[];

@@ -52,6 +52,21 @@
   margin: 0.25rem;
 }
 
-header>button.selected {
-  width: 100px;
+.button-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.button-wrapper>button {
+  margin: 10px;
+  height: 20px;
+  background-color: white;
+  display: inline-block;
+}
+
+.button-wrapper>button.selected {
+  background-color: black;
+  color: white;
 }

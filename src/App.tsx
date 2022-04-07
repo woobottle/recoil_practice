@@ -1,18 +1,19 @@
-import React from "react";
-import logo from "./logo.svg";
+import { RecoilRoot } from "recoil";
 import "./assets/css/App.css";
-import SelectorWithRecoil from "./components/SeletorWithRecoil";
 import SelectorWithContext from "./components/SelectorWithContext";
 import SelectorWithCustomHook from "./components/SelectorWithCustomHook";
+import SelectorWithRecoil from "./components/SelectorWithRecoil";
 
 function App() {
   return (
     <div className="App">
-      <SelectorWithRecoil />
-      <hr />
-      <SelectorWithContext />
-      <hr />
-      <SelectorWithCustomHook />
+      <RecoilRoot>
+        <SelectorWithCustomHook />
+        <hr />
+        <SelectorWithContext />
+        <hr />
+        <SelectorWithRecoil />
+      </RecoilRoot>
     </div>
   );
 }
