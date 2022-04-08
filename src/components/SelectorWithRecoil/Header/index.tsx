@@ -27,6 +27,7 @@ const Header = () => {
         {COLORS &&
           Object.keys(COLORS).map((color) => (
             <button
+              key={color}
               onClick={handleColor}
               data-color={color}
               data-testid="color-select-button"

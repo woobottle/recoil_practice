@@ -7,8 +7,7 @@ const ResetButton = () => {
   const handleReset = () => {
     resetScore();
   };
-
-  return <button onClick={handleReset}>Reset</button>;
+  return <button onClick={handleReset}> Reset</button>;
 };
 
 export default ResetButton;

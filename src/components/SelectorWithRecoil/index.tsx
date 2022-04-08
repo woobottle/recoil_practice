@@ -1,7 +1,8 @@
 import Header from "./Header";
-import ResetButton from "./ResetButton";
 import GameBoard from "./GameBoard";
 import ScoreBoard from "./ScoreBoard";
+import ErrorBoundary from "../shared/ErrorBoundary";
+import ResetButton from "./ResetButton";
 
 const SelectorWithRecoil = () => {
   return (
@@ -9,7 +10,9 @@ const SelectorWithRecoil = () => {
       <Header />
       <GameBoard />
       <ScoreBoard />
-      <ResetButton />
+      <ErrorBoundary fallback={<div>sorry something wrong</div>}>
+        <ResetButton />
+      </ErrorBoundary>
     </>
   );
 };

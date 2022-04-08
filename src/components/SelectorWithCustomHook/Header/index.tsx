@@ -28,6 +28,7 @@ const Header = ({ color: selectedColor, onSelect }: HaderProps) => {
         {COLORS &&
           Object.keys(COLORS).map((color) => (
             <button
+              key={color}
               onClick={handleColor}
               data-color={color}
               className={color === selectedColor ? "selected" : undefined}

@@ -1,9 +1,14 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import App from "../../../App";
+import ResetButton from ".";
+import { RecoilRoot } from "recoil";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  // expect(linkElement).toBeInTheDocument();
+test("test resetbutton", () => {
+  render(
+    <RecoilRoot>
+      <ResetButton />
+    </RecoilRoot>
+  );
+
+  const resetButton = screen.getByText("Reset");
+  expect(resetButton).toBeInTheDocument();
 });

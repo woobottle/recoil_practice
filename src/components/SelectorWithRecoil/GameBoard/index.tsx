@@ -8,7 +8,7 @@ const GameBoard = () => {
       <h2>Press on boxes to color: </h2>
       <div className="grid-board">
         {Array.from({ length: BOX_NUM }).map((_v, index) => (
-          <Box id={index} />
+          <Box id={index} key={`box-${index}`} />
         ))}
       </div>
     </>

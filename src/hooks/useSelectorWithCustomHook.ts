@@ -1,6 +1,5 @@
-import { boxState } from "./../atoms/index";
 import { initialBoxes } from "./../constants/index";
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import { COLORS } from "../constants";
 
 type SelectState = {

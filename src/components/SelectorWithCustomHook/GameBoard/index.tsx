@@ -24,7 +24,7 @@ const GameBoard = ({ boxStates, onSelect }: GameBoardProps) => {
       <h2>Press on boxes to color: </h2>
       <div className="grid-board" onClick={clickHandler}>
         {boxStates.map((color, index) => (
-          <Box id={index} color={color} />
+          <Box id={index} color={color} key={`box-${index}`} />
         ))}
       </div>
     </>
