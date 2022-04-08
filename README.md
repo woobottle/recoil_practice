@@ -9,12 +9,15 @@ Recoil, Context API, useReducer 세 방식을 이용하여 state를 관리하였
 * ErrorBoundary의 사용을 적용하였습니다.
 
 ### customHook 버전
+https://github.com/woobottle/recoil_practice/tree/master/src/components/SelectorWithCustomHook
 ![use CustomHook](https://user-images.githubusercontent.com/50283326/162380795-9386965f-d14d-4d7c-8464-3bdd1f5e15b5.gif)
 
 ### contextApi 버전
+https://github.com/woobottle/recoil_practice/tree/master/src/components/SelectorWithContext
 ![use Context API](https://user-images.githubusercontent.com/50283326/162380823-c5ff8d9f-a309-44a9-b98b-da90ea0de54b.gif)
 
 ### Recoil 버전
+https://github.com/woobottle/recoil_practice/tree/master/src/components/SelectorWithRecoil
 ![use Recoil](https://user-images.githubusercontent.com/50283326/162380832-b9745f5e-ef89-4a26-86c0-56d8a18c8b68.gif)
 
 
