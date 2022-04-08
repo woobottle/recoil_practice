@@ -7,11 +7,11 @@ import SelectorWithRecoil from "./components/SelectorWithRecoil";
 function App() {
   return (
     <div className="App">
+      <SelectorWithCustomHook />
+      <hr />
+      <SelectorWithContext />
+      <hr />
       <RecoilRoot>
-        <SelectorWithCustomHook />
-        <hr />
-        <SelectorWithContext />
-        <hr />
         <SelectorWithRecoil />
       </RecoilRoot>
     </div>
