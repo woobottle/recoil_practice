@@ -6,7 +6,7 @@ Recoil, Context API, useReducer 세 방식을 이용하여 state를 관리하였
 ## 주요 Concept
 * Recoil, Context API, useReducer의 사용을 연습하기 위한 프로젝트 입니다.
 * 각 컴포넌트마다 test를 작성중입니다.
-* ErrorBoundary의 사용을 적용하였습니다.
+* ErrorBoundary의 사용을 적용해보았습니다.
 
 ![use CustomHook](https://user-images.githubusercontent.com/50283326/162380795-9386965f-d14d-4d7c-8464-3bdd1f5e15b5.gif)
 
